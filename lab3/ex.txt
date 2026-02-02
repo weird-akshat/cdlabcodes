@@ -1,0 +1,37 @@
+#include <stdio.h>
+#define MAX 100
+
+// 1. Comments Test: int float should NOT be detected
+/* 2. Block Comment Test: double void should NOT be detected */
+
+// 3. Directive Test: This line should be stripped
+#define IGNORE_ME 1
+
+char *message = "Keep this #include inside the string!";
+char *path = "//DoNotRemoveThisString";
+
+// 4. Function Definition Test
+void calculate(int a, float b) {
+    // 5. Tricky Syntax Test (Keywords touching symbols)
+    if(a<=b) { 
+        return; 
+    }
+}
+
+int main() {
+    int x = 10;
+    float y = 20.5;
+    
+    // 6. Operator Test
+    if (x != y && (x < 100 || y >= 20)) {
+        x++; 
+    }
+    
+    // 7. Partial Word Test (domain should be an identifier, not 'do' keyword)
+    int domain = 5;
+    
+    // 8. String Literal Test
+    char *s = "if while return"; 
+    
+    return 0;
+}

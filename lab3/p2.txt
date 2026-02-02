@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+
+
+char *message = "Keep this #include inside the string!";
+char *path = "//DoNotRemoveThisString";
+
+
+void calculate(int a, float b) {
+    
+    if(a<=b) { 
+        return; 
+    }
+}
+
+int main() {
+    int x = 10;
+    float y = 20.5;
+    
+    
+    if (x != y && (x < 100 || y >= 20)) {
+        x++; 
+    }
+    
+    
+    int domain = 5;
+    
+    
+    char *s = "if while return"; 
+    
+    return 0;
+}
